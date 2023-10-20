@@ -1,0 +1,50 @@
+================================================================================
+
+Shinjuku is a colorscheme for NeoVim written in Lua with built in support
+for native LSP, TreeSitter and many more plugins. It is a dark theme with
+subtle syntax highlighting that doesn't distract, along with bright neon
+markers and selections that are easily noticeable.
+
+================================================================================
+CONTENTS
+
+    1. Features ................. |shinjuku-features|
+    2. Usage .................... |shinjuku-usage|
+
+================================================================================
+1. Features                                             *shinjuku-features*
+
+    + Supported plugins -TreeSitter
+                        -LSP Diagnostics
+                        -Git Signs
+                        -Telescope.nvim
+                        -Indent-Blankline.nvim
+                        -Lualine
+                        -Vim-Illuminate
+
+    + Asynchronous highlight loading which makes the theme extremely fast
+
+================================================================================
+2. Usage                                                   *shinjuku-usage*
+
+    To use the default settings, just apply the colorscheme
+
+    If you are using Vim-Script:
+        colorscheme shinjuku~
+
+    If you are using Lua:
+        require('shinjuku').set~
+
+
+    shinjuku also includes a Lualine theme. Set it in your Lualine config
+        require('lualine').setup {~
+          options = {~
+            -- ... your lualine config
+            theme = 'shinjuku'~
+            -- ... your lualine config
+          }~
+        }~
+
+================================================================================
+
+vim:tw=78:ts=4:ft=help:norl:
