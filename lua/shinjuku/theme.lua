@@ -88,7 +88,7 @@ theme.loadEditor = function()
 		IncSearch = { fg = shinjuku.shinjuku0_gui, bg = shinjuku.shinjuku11_gui },
 		LineNr = { fg = shinjuku.shinjuku3_gui_bright },
 		CursorLineNr = { fg = shinjuku.cursorlinefg, bg = shinjuku.cursorlinebg },
-		MatchParen = { fg = shinjuku.shinjuku0_gui, bg = shinjuku.shinjuku11_gui, style = bold },
+		MatchParen = { fg = shinjuku.shinjuku0_gui, bg = shinjuku.shinjuku15_gui, style = bold },
 		ModeMsg = { fg = shinjuku.shinjuku4_gui },
 		MoreMsg = { fg = shinjuku.shinjuku4_gui },
 		NonText = { fg = shinjuku.shinjuku1_gui },
