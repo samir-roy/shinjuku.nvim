@@ -17,8 +17,10 @@ local shinjuku = {
 	shinjuku12_gui = named_colors.orange, -- shinjuku12 in palette
 	shinjuku13_gui = named_colors.yellow, -- shinjuku13 in palette
 	shinjuku14_gui = named_colors.green, -- shinjuku14 in palette
-	shinjuku15_gui = named_colors.purple, -- shinjuku15 in palette
-	none = "NONE",
+	shinjuku15_gui = named_colors.neon_yellow, -- shinjuku15 in palette
+  black = named_colors.pure_black,
+  special = named_colors.light_lavender,
+	none = named_colors.none,
 }
 
 -- Enable contrast sidebars, floating windows and popup menus

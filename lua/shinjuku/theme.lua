@@ -92,10 +92,10 @@ theme.loadEditor = function()
 		ModeMsg = { fg = shinjuku.shinjuku4_gui },
 		MoreMsg = { fg = shinjuku.shinjuku4_gui },
 		NonText = { fg = shinjuku.shinjuku1_gui },
-		Pmenu = { fg = shinjuku.shinjuku4_gui, bg = shinjuku.shinjuku2_gui },
-		PmenuSel = { fg = shinjuku.shinjuku4_gui, bg = shinjuku.shinjuku10_gui },
-		PmenuSbar = { fg = shinjuku.shinjuku4_gui, bg = shinjuku.shinjuku2_gui },
-		PmenuThumb = { fg = shinjuku.shinjuku4_gui, bg = shinjuku.shinjuku4_gui },
+		Pmenu = { fg = shinjuku.shinjuku0_gui, bg = shinjuku.special },
+		PmenuSel = { fg = shinjuku.shinjuku0_gui, bg = shinjuku.shinjuku11_gui },
+		PmenuSbar = { fg = shinjuku.shinjuku4_gui, bg = shinjuku.shinjuku0_gui },
+		PmenuThumb = { fg = shinjuku.shinjuku4_gui, bg = shinjuku.shinjuku14_gui },
 		Question = { fg = shinjuku.shinjuku14_gui },
 		QuickFixLine = { fg = shinjuku.shinjuku4_gui, bg = shinjuku.none, style = "reverse" },
 		qfLineNr = { fg = shinjuku.shinjuku4_gui, bg = shinjuku.none, style = "reverse" },
@@ -600,7 +600,7 @@ theme.loadPlugins = function()
 		-- Lspsaga lightbulb
 		LspSagaLightBulb = { link = 'DiagnosticSignHint' },
 		-- LspSaga shadow
-		SagaShadow = { fg = 'black' },
+		SagaShadow = { fg = shinjuku.black },
 		-- LspSaga float
 		LspSagaBorderTitle = { link = 'Title' },
 		-- LspSaga Outline
