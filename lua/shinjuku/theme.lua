@@ -394,12 +394,12 @@ theme.loadLSP = function()
 
 	local lsp = {
 		LspDiagnosticsDefaultError = { fg = shinjuku.shinjuku11_gui }, -- used for "Error" diagnostic virtual text
-		LspDiagnosticsSignError = { fg = shinjuku.shinjuku11_gui }, -- used for "Error" diagnostic signs in sign column
+		LspDiagnosticsSignError = { fg = shinjuku.shinjuku0_gui, bg = shinjuku.shinjuku11_gui }, -- used for "Error" diagnostic signs in sign column
 		LspDiagnosticsFloatingError = { fg = shinjuku.shinjuku11_gui }, -- used for "Error" diagnostic messages in the diagnostics float
 		LspDiagnosticsVirtualTextError = { fg = shinjuku.shinjuku11_gui }, -- Virtual text "Error"
 		LspDiagnosticsUnderlineError = { style = "undercurl", sp = shinjuku.shinjuku11_gui }, -- used to underline "Error" diagnostics.
 		LspDiagnosticsDefaultWarning = { fg = shinjuku.shinjuku15_gui }, -- used for "Warning" diagnostic signs in sign column
-		LspDiagnosticsSignWarning = { fg = shinjuku.shinjuku15_gui }, -- used for "Warning" diagnostic signs in sign column
+		LspDiagnosticsSignWarning = { fg=shinjuku.shinjuku0_gui, bg = shinjuku.shinjuku15_gui }, -- used for "Warning" diagnostic signs in sign column
 		LspDiagnosticsFloatingWarning = { fg = shinjuku.shinjuku15_gui }, -- used for "Warning" diagnostic messages in the diagnostics float
 		LspDiagnosticsVirtualTextWarning = { fg = shinjuku.shinjuku15_gui }, -- Virtual text "Warning"
 		LspDiagnosticsUnderlineWarning = { style = "undercurl", sp = shinjuku.shinjuku15_gui }, -- used to underline "Warning" diagnostics.
