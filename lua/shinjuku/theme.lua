@@ -23,7 +23,7 @@ theme.loadSyntax = function()
 		StorageClass = { fg = shinjuku.shinjuku9_gui }, -- static, register, volatile, etc.
 		Structure = { fg = shinjuku.shinjuku9_gui }, -- struct, union, enum, etc.
 		Constant = { fg = shinjuku.shinjuku4_gui }, -- any constant
-		Character = { fg = shinjuku.shinjuku12_gui }, -- any character constant: 'c', '\n'
+		Character = { fg = shinjuku.shinjuku11_gui }, -- any character constant: 'c', '\n'
 		Number = { fg = shinjuku.shinjuku15_gui }, -- a number constant: 5
 		Boolean = { fg = shinjuku.shinjuku9_gui }, -- a boolean constant: TRUE, false
 		Float = { fg = shinjuku.shinjuku15_gui }, -- a floating point constant: 2.3e10
@@ -66,7 +66,7 @@ theme.loadSyntax = function()
 		Identifier = { fg = shinjuku.shinjuku9_gui, style = italic }, -- any variable name
 		Keyword = { fg = shinjuku.shinjuku9_gui, style = italic }, -- italic for, do, while, etc.
 		Repeat = { fg = shinjuku.shinjuku9_gui, style = italic }, -- italic any other keyword
-		String = { fg = shinjuku.shinjuku12_gui, style = italic }, -- any string
+		String = { fg = shinjuku.shinjuku11_gui, style = italic }, -- any string
 	}
 end
 
@@ -346,10 +346,10 @@ theme.loadTreeSitter = function()
 	treesitter.TSKeywordOperator = { fg = shinjuku.shinjuku8_gui, style = italic }
 	treesitter.TSRepeat = { fg = shinjuku.shinjuku9_gui, style = italic } -- For keywords related to loops.
 	-- Strings
-	treesitter.TSString = { fg = shinjuku.shinjuku12_gui, style = italic } -- For strings.
+	treesitter.TSString = { fg = shinjuku.shinjuku11_gui, style = italic } -- For strings.
 	treesitter.TSStringRegex = { fg = shinjuku.shinjuku7_gui, style = italic } -- For regexes.
 	treesitter.TSStringEscape = { fg = shinjuku.shinjuku15_gui, style = italic } -- For escape characters within a string.
-	treesitter.TSCharacter = { fg = shinjuku.shinjuku12_gui, style = italic } -- For characters.
+	treesitter.TSCharacter = { fg = shinjuku.shinjuku11_gui, style = italic } -- For characters.
 
 	treesitter["@comment"] = { fg = shinjuku.shinjuku3_gui_bright, style = italic }
 	treesitter["@conditional"] = { fg = shinjuku.shinjuku9_gui, style = italic }
@@ -364,10 +364,10 @@ theme.loadTreeSitter = function()
 	treesitter["@keyword.return"] = { fg = shinjuku.shinjuku8_gui, style = italic }
 	treesitter["@keyword.operator"] = { fg = shinjuku.shinjuku8_gui, style = italic }
 	treesitter["@repeat"] = { fg = shinjuku.shinjuku9_gui, style = italic }
-	treesitter["@string"] = { fg = shinjuku.shinjuku12_gui, style = italic }
+	treesitter["@string"] = { fg = shinjuku.shinjuku11_gui, style = italic }
 	treesitter["@string.regex"] = { fg = shinjuku.shinjuku7_gui, style = italic }
 	treesitter["@string.escape"] = { fg = shinjuku.shinjuku15_gui, style = italic }
-	treesitter["@character"] = { fg = shinjuku.shinjuku12_gui, style = italic }
+	treesitter["@character"] = { fg = shinjuku.shinjuku11_gui, style = italic }
 
 	return treesitter
 end
