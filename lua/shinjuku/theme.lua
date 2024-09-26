@@ -59,7 +59,7 @@ theme.loadSyntax = function()
 		markdownH1 = { fg = shinjuku.shinjuku8_gui, style = bold },
 		markdownH2 = { fg = shinjuku.shinjuku11_gui, style = bold },
 		markdownH3 = { fg = shinjuku.shinjuku14_gui, style = bold },
-		Error = { fg = shinjuku.shinjuku11_gui, bg = shinjuku.none, style = bold_underline }, -- any erroneous construct with bold
+		Error = { fg = shinjuku.shinjuku_error, bg = shinjuku.none, style = bold_underline }, -- any erroneous construct with bold
 		Comment = { fg = shinjuku.shinjuku3_gui_bright, style = italic }, -- italic comments
 		Conditional = { fg = shinjuku.shinjuku9_gui, style = italic }, -- italic if, then, else, endif, switch, etc.
 		Function = { fg = shinjuku.shinjuku8_gui, style = italic }, -- italic funtion names
@@ -247,7 +247,7 @@ theme.loadTreeSitter = function()
 		TSFloat = { fg = shinjuku.shinjuku15_gui }, -- For floats
 		TSNumber = { fg = shinjuku.shinjuku15_gui }, -- For all number
 		TSAttribute = { fg = shinjuku.shinjuku15_gui }, -- (unstable) TODO: docs
-		TSError = { fg = shinjuku.shinjuku11_gui }, -- For syntax/parser errors.
+		TSError = { fg = shinjuku.shinjuku_error }, -- For syntax/parser errors.
 		TSException = { fg = shinjuku.shinjuku15_gui }, -- For exception related keywords.
 		TSFuncMacro = { fg = shinjuku.shinjuku7_gui }, -- For macro defined fuctions (calls and definitions): each `macro_rules` in Rust.
 		TSInclude = { fg = shinjuku.shinjuku9_gui }, -- For includes: `#include` in C, `use` or `extern crate` in Rust, or `require` in Lua.
@@ -256,7 +256,7 @@ theme.loadTreeSitter = function()
 		TSParameter = { fg = shinjuku.shinjuku10_gui }, -- For parameters of a function.
 		TSParameterReference = { fg = shinjuku.shinjuku10_gui }, -- For references to parameters of a function.
 		TSPunctDelimiter = { fg = shinjuku.shinjuku8_gui }, -- For delimiters ie: `.`
-		TSPunctBracket = { fg = shinjuku.shinjuku8_gui }, -- For brackets and parens.
+		TSPunctBracket = { fg = shinjuku.shinjuku_bracket }, -- For brackets and parens.
 		TSPunctSpecial = { fg = shinjuku.shinjuku8_gui }, -- For special punctutation that does not fall in the catagories before.
 		TSSymbol = { fg = shinjuku.shinjuku15_gui }, -- For identifiers referring to symbols or atoms.
 		TSType = { fg = shinjuku.shinjuku9_gui }, -- For types.
@@ -275,7 +275,7 @@ theme.loadTreeSitter = function()
 		["@float"] = { fg = shinjuku.shinjuku15_gui },
 		["@number"] = { fg = shinjuku.shinjuku15_gui },
 		["@attribute"] = { fg = shinjuku.shinjuku15_gui },
-		["@error"] = { fg = shinjuku.shinjuku11_gui },
+		["@error"] = { fg = shinjuku.shinjuku_error },
 		["@exception"] = { fg = shinjuku.shinjuku15_gui },
 		["@funtion.macro"] = { fg = shinjuku.shinjuku7_gui },
 		["@include"] = { fg = shinjuku.shinjuku9_gui },
@@ -283,7 +283,7 @@ theme.loadTreeSitter = function()
 		["@operator"] = { fg = shinjuku.shinjuku9_gui },
 		["@parameter"] = { fg = shinjuku.shinjuku10_gui },
 		["@punctuation.delimiter"] = { fg = shinjuku.shinjuku8_gui },
-		["@punctuation.bracket"] = { fg = shinjuku.shinjuku8_gui },
+		["@punctuation.bracket"] = { fg = shinjuku.shinjuku_bracket },
 		["@punctuation.special"] = { fg = shinjuku.shinjuku8_gui },
 		["@symbol"] = { fg = shinjuku.shinjuku15_gui },
 		["@type"] = { fg = shinjuku.shinjuku9_gui },
@@ -393,8 +393,8 @@ theme.loadLSP = function()
 	-- Lsp highlight groups
 
 	local lsp = {
-		LspDiagnosticsDefaultError = { fg = shinjuku.shinjuku11_gui }, -- used for "Error" diagnostic virtual text
-		LspDiagnosticsSignError = { fg = shinjuku.shinjuku0_gui, bg = shinjuku.shinjuku11_gui }, -- used for "Error" diagnostic signs in sign column
+		LspDiagnosticsDefaultError = { fg = shinjuku.shinjuku_error }, -- used for "Error" diagnostic virtual text
+		LspDiagnosticsSignError = { fg = shinjuku.shinjuku0_gui, bg = shinjuku.shinjuku_error }, -- used for "Error" diagnostic signs in sign column
 		LspDiagnosticsFloatingError = { fg = shinjuku.shinjuku11_gui }, -- used for "Error" diagnostic messages in the diagnostics float
 		LspDiagnosticsVirtualTextError = { fg = shinjuku.shinjuku11_gui }, -- Virtual text "Error"
 		LspDiagnosticsUnderlineError = { style = "undercurl", sp = shinjuku.shinjuku11_gui }, -- used to underline "Error" diagnostics.

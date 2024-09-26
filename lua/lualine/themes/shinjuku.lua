@@ -15,7 +15,7 @@ shinjuku.insert = {
 }
 
 shinjuku.visual = {
-	a = { fg = colors.shinjuku0_gui, bg = colors.shinjuku11_gui },
+	a = { fg = colors.shinjuku0_gui, bg = colors.shinjuku_error },
 	b = { fg = colors.shinjuku4_gui, bg = colors.shinjuku2_gui },
 	y = {  fg = colors.shinjuku5_gui, bg = colors.shinjuku2_gui },
 }
