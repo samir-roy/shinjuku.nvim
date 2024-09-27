@@ -20,13 +20,13 @@ theme.loadSyntax = function()
 	-- Syntax highlight groups
 	return {
 		Type = { fg = shinjuku.shinjuku9_gui }, -- int, long, char, etc.
-		StorageClass = { fg = shinjuku.shinjuku9_gui }, -- static, register, volatile, etc.
-		Structure = { fg = shinjuku.shinjuku9_gui }, -- struct, union, enum, etc.
+		StorageClass = { fg = shinjuku.shinjuku13_gui }, -- static, register, volatile, etc.
+		Structure = { fg = shinjuku.shinjuku13_gui }, -- struct, union, enum, etc.
 		Constant = { fg = shinjuku.shinjuku4_gui }, -- any constant
 		Character = { fg = shinjuku.shinjuku11_gui }, -- any character constant: 'c', '\n'
-		Number = { fg = shinjuku.shinjuku15_gui }, -- a number constant: 5
-		Boolean = { fg = shinjuku.shinjuku9_gui }, -- a boolean constant: TRUE, false
-		Float = { fg = shinjuku.shinjuku15_gui }, -- a floating point constant: 2.3e10
+		Number = { fg = shinjuku.shinjuku13_gui }, -- a number constant: 5
+		Boolean = { fg = shinjuku.shinjuku13_gui }, -- a boolean constant: TRUE, false
+		Float = { fg = shinjuku.shinjuku13_gui }, -- a floating point constant: 2.3e10
 		Statement = { fg = shinjuku.shinjuku9_gui }, -- any statement
 		Label = { fg = shinjuku.shinjuku9_gui }, -- case, default, etc.
 		Operator = { fg = shinjuku.shinjuku9_gui }, -- sizeof", "+", "*", etc.
@@ -46,7 +46,7 @@ theme.loadSyntax = function()
 		Underlined = { fg = shinjuku.shinjuku14_gui, bg = shinjuku.none, style = "underline" }, -- text that stands out, HTML links
 		Ignore = { fg = shinjuku.shinjuku1_gui }, -- left blank, hidden
 		Todo = { fg = shinjuku.shinjuku13_gui, bg = shinjuku.none, style = bold_italic }, -- anything that needs extra attention; mostly the keywords TODO FIXME and XXX
-		Conceal = { fg = shinjuku.none, bg = shinjuku.shinjuku0_gui },
+		Conceal = { fg = shinjuku.none, bg = shinjuku.background },
 		htmlLink = { fg = shinjuku.shinjuku14_gui, style = "underline" },
 		markdownH1Delimiter = { fg = shinjuku.shinjuku8_gui },
 		markdownH2Delimiter = { fg = shinjuku.shinjuku11_gui },
@@ -85,22 +85,22 @@ theme.loadEditor = function()
 		ErrorMsg = { fg = shinjuku.none },
 		Folded = { fg = shinjuku.shinjuku3_gui_bright, bg = shinjuku.none, style = italic },
 		FoldColumn = { fg = shinjuku.shinjuku7_gui },
-		IncSearch = { fg = shinjuku.shinjuku0_gui, bg = shinjuku.shinjuku14_gui },
+		IncSearch = { fg = shinjuku.background, bg = shinjuku.shinjuku14_gui },
 		LineNr = { fg = shinjuku.shinjuku3_gui_bright },
 		CursorLineNr = { fg = shinjuku.cursorlinefg, bg = shinjuku.cursorlinebg },
-		MatchParen = { fg = shinjuku.shinjuku0_gui, bg = shinjuku.shinjuku15_gui, style = bold },
+		MatchParen = { fg = shinjuku.background, bg = shinjuku.shinjuku15_gui, style = bold },
 		ModeMsg = { fg = shinjuku.shinjuku4_gui },
 		MoreMsg = { fg = shinjuku.shinjuku4_gui },
 		NonText = { fg = shinjuku.shinjuku1_gui },
-		Pmenu = { fg = shinjuku.shinjuku0_gui, bg = shinjuku.special },
-		PmenuSel = { fg = shinjuku.shinjuku0_gui, bg = shinjuku.shinjuku11_gui },
-		PmenuSbar = { fg = shinjuku.shinjuku4_gui, bg = shinjuku.shinjuku0_gui },
+		Pmenu = { fg = shinjuku.background, bg = shinjuku.special },
+		PmenuSel = { fg = shinjuku.background, bg = shinjuku.shinjuku11_gui },
+		PmenuSbar = { fg = shinjuku.shinjuku4_gui, bg = shinjuku.background },
 		PmenuThumb = { fg = shinjuku.shinjuku4_gui, bg = shinjuku.shinjuku14_gui },
 		Question = { fg = shinjuku.shinjuku14_gui },
 		QuickFixLine = { fg = shinjuku.shinjuku4_gui, bg = shinjuku.none, style = "reverse" },
 		qfLineNr = { fg = shinjuku.shinjuku4_gui, bg = shinjuku.none, style = "reverse" },
-		Search = { fg = shinjuku.shinjuku0_gui, bg = shinjuku.shinjuku14_gui },
-		Substitute = { fg = shinjuku.shinjuku0_gui, bg = shinjuku.shinjuku12_gui },
+		Search = { fg = shinjuku.background, bg = shinjuku.shinjuku14_gui },
+		Substitute = { fg = shinjuku.background, bg = shinjuku.shinjuku12_gui },
 		SpecialKey = { fg = shinjuku.shinjuku9_gui },
 		SpellBad = { fg = shinjuku.shinjuku11_gui, bg = shinjuku.none, style = italic_undercurl },
 		SpellCap = { fg = shinjuku.shinjuku7_gui, bg = shinjuku.none, style = italic_undercurl },
@@ -114,7 +114,7 @@ theme.loadEditor = function()
 		TablineSel = { fg = shinjuku.shinjuku1_gui, bg = shinjuku.shinjuku9_gui },
 		Tabline = { fg = shinjuku.shinjuku4_gui, bg = shinjuku.shinjuku1_gui },
 		Title = { fg = shinjuku.shinjuku14_gui, bg = shinjuku.none, style = bold },
-		Visual = { fg = shinjuku.shinjuku0_gui, bg = shinjuku.shinjuku15_gui },
+		Visual = { fg = shinjuku.background, bg = shinjuku.shinjuku15_gui },
 		VisualNOS = { fg = shinjuku.none, bg = shinjuku.shinjuku2_gui },
 		WarningMsg = { fg = shinjuku.shinjuku15_gui },
 		WildMenu = { fg = shinjuku.shinjuku12_gui, bg = shinjuku.none, style = bold },
@@ -140,7 +140,7 @@ theme.loadEditor = function()
 		DashboardFooter = { fg = shinjuku.shinjuku14_gui, style = italic },
 
 		-- Barbar
-		BufferTabpageFill = { bg = shinjuku.shinjuku0_gui },
+		BufferTabpageFill = { bg = shinjuku.background },
 
 		BufferCurrent = { bg = shinjuku.shinjuku1_gui },
 		BufferCurrentMod = { bg = shinjuku.shinjuku1_gui, fg = shinjuku.shinjuku15_gui },
@@ -149,12 +149,12 @@ theme.loadEditor = function()
 		BufferCurrentIndex = { bg = shinjuku.shinjuku1_gui },
 		BufferCurrentTarget = { bg = shinjuku.shinjuku1_gui, fg = shinjuku.shinjuku11_gui },
 
-		BufferInactive = { bg = shinjuku.shinjuku0_gui, fg = shinjuku.shinjuku3_gui },
-		BufferInactiveMod = { bg = shinjuku.shinjuku0_gui, fg = shinjuku.shinjuku15_gui },
-		BufferInactiveIcon = { bg = shinjuku.shinjuku0_gui, fg = shinjuku.shinjuku3_gui },
-		BufferInactiveSign = { bg = shinjuku.shinjuku0_gui, fg = shinjuku.shinjuku3_gui },
-		BufferInactiveIndex = { bg = shinjuku.shinjuku0_gui, fg = shinjuku.shinjuku3_gui },
-		BufferInactiveTarget = { bg = shinjuku.shinjuku0_gui, fg = shinjuku.shinjuku11_gui },
+		BufferInactive = { bg = shinjuku.background, fg = shinjuku.shinjuku3_gui },
+		BufferInactiveMod = { bg = shinjuku.background, fg = shinjuku.shinjuku15_gui },
+		BufferInactiveIcon = { bg = shinjuku.background, fg = shinjuku.shinjuku3_gui },
+		BufferInactiveSign = { bg = shinjuku.background, fg = shinjuku.shinjuku3_gui },
+		BufferInactiveIndex = { bg = shinjuku.background, fg = shinjuku.shinjuku3_gui },
+		BufferInactiveTarget = { bg = shinjuku.background, fg = shinjuku.shinjuku11_gui },
 
 		BufferVisible = { bg = shinjuku.shinjuku2_gui },
 		BufferVisibleMod = { bg = shinjuku.shinjuku2_gui, fg = shinjuku.shinjuku15_gui },
@@ -182,8 +182,8 @@ theme.loadEditor = function()
 
 		-- leap.nvim
 		LeapMatch = { style = "underline,nocombine", fg = shinjuku.shinjuku13_gui },
-		LeapLabelPrimary = { style = "nocombine", fg = shinjuku.shinjuku0_gui, bg = shinjuku.shinjuku13_gui },
-		LeapLabelSecondary = { style = "nocombine", fg = shinjuku.shinjuku0_gui, bg = shinjuku.shinjuku15_gui },
+		LeapLabelPrimary = { style = "nocombine", fg = shinjuku.background, bg = shinjuku.shinjuku13_gui },
+		LeapLabelSecondary = { style = "nocombine", fg = shinjuku.background, bg = shinjuku.shinjuku15_gui },
 	}
 
 	-- Options:
@@ -193,15 +193,15 @@ theme.loadEditor = function()
 		editor.Normal = { fg = shinjuku.shinjuku4_gui, bg = shinjuku.none } -- normal text and background color
 		editor.SignColumn = { fg = shinjuku.shinjuku4_gui, bg = shinjuku.none }
 	else
-		editor.Normal = { fg = shinjuku.shinjuku4_gui, bg = shinjuku.shinjuku0_gui } -- normal text and background color
-		editor.SignColumn = { fg = shinjuku.shinjuku4_gui, bg = shinjuku.shinjuku0_gui }
+		editor.Normal = { fg = shinjuku.shinjuku4_gui, bg = shinjuku.background } -- normal text and background color
+		editor.SignColumn = { fg = shinjuku.shinjuku4_gui, bg = shinjuku.background }
 	end
 
 	-- Remove window split borders
 	if vim.g.shinjuku_borders then
 		editor.VertSplit = { fg = shinjuku.shinjuku2_gui }
 	else
-		editor.VertSplit = { fg = shinjuku.shinjuku0_gui }
+		editor.VertSplit = { fg = shinjuku.background }
 	end
 
 	if vim.g.shinjuku_uniform_diff_background then
@@ -244,8 +244,8 @@ theme.loadTreeSitter = function()
 	local treesitter = {
 		TSConstructor = { fg = shinjuku.shinjuku9_gui }, -- For constructor calls and definitions: `= { }` in Lua, and Java constructors.
 		TSConstant = { fg = shinjuku.shinjuku13_gui }, -- For constants
-		TSFloat = { fg = shinjuku.shinjuku15_gui }, -- For floats
-		TSNumber = { fg = shinjuku.shinjuku15_gui }, -- For all number
+		TSFloat = { fg = shinjuku.shinjuku13_gui }, -- For floats
+		TSNumber = { fg = shinjuku.shinjuku13_gui }, -- For all number
 		TSAttribute = { fg = shinjuku.shinjuku15_gui }, -- (unstable) TODO: docs
 		TSError = { fg = shinjuku.shinjuku_error }, -- For syntax/parser errors.
 		TSException = { fg = shinjuku.shinjuku15_gui }, -- For exception related keywords.
@@ -258,7 +258,7 @@ theme.loadTreeSitter = function()
 		TSPunctDelimiter = { fg = shinjuku.shinjuku8_gui }, -- For delimiters ie: `.`
 		TSPunctBracket = { fg = shinjuku.shinjuku_bracket }, -- For brackets and parens.
 		TSPunctSpecial = { fg = shinjuku.shinjuku8_gui }, -- For special punctutation that does not fall in the catagories before.
-		TSSymbol = { fg = shinjuku.shinjuku15_gui }, -- For identifiers referring to symbols or atoms.
+		TSSymbol = { fg = shinjuku.shinjuku13_gui }, -- For identifiers referring to symbols or atoms.
 		TSType = { fg = shinjuku.shinjuku9_gui }, -- For types.
 		TSTypeBuiltin = { fg = shinjuku.shinjuku9_gui }, -- For builtin types.
 		TSTag = { fg = shinjuku.shinjuku4_gui }, -- Tags like html tag names.
@@ -267,13 +267,13 @@ theme.loadTreeSitter = function()
 		TSTextReference = { fg = shinjuku.shinjuku15_gui }, -- FIXME
 		TSEmphasis = { fg = shinjuku.shinjuku10_gui }, -- For text to be represented with emphasis.
 		TSUnderline = { fg = shinjuku.shinjuku4_gui, bg = shinjuku.none, style = "underline" }, -- For text to be represented with an underline.
-		TSLiteral = { fg = shinjuku.shinjuku4_gui }, -- Literal text.
+		TSLiteral = { fg = shinjuku.shinjuku13_gui }, -- Literal text.
 		TSURI = { fg = shinjuku.shinjuku14_gui }, -- Any URI like a link or email.
 		TSAnnotation = { fg = shinjuku.shinjuku11_gui }, -- For C++/Dart attributes, annotations that can be attached to the code to denote some kind of meta information.
 		["@constructor"] = { fg = shinjuku.shinjuku9_gui },
 		["@constant"] = { fg = shinjuku.shinjuku13_gui },
-		["@float"] = { fg = shinjuku.shinjuku15_gui },
-		["@number"] = { fg = shinjuku.shinjuku15_gui },
+		["@float"] = { fg = shinjuku.shinjuku13_gui },
+		["@number"] = { fg = shinjuku.shinjuku13_gui },
 		["@attribute"] = { fg = shinjuku.shinjuku15_gui },
 		["@error"] = { fg = shinjuku.shinjuku_error },
 		["@exception"] = { fg = shinjuku.shinjuku15_gui },
@@ -285,7 +285,7 @@ theme.loadTreeSitter = function()
 		["@punctuation.delimiter"] = { fg = shinjuku.shinjuku8_gui },
 		["@punctuation.bracket"] = { fg = shinjuku.shinjuku_bracket },
 		["@punctuation.special"] = { fg = shinjuku.shinjuku8_gui },
-		["@symbol"] = { fg = shinjuku.shinjuku15_gui },
+		["@symbol"] = { fg = shinjuku.shinjuku13_gui },
 		["@type"] = { fg = shinjuku.shinjuku9_gui },
 		["@type.builtin"] = { fg = shinjuku.shinjuku9_gui },
 		["@tag"] = { fg = shinjuku.shinjuku4_gui },
@@ -294,7 +294,7 @@ theme.loadTreeSitter = function()
 		["@text.reference"] = { fg = shinjuku.shinjuku15_gui, style = bold },
 		["@text.emphasis"] = { fg = shinjuku.shinjuku10_gui, style = italic },
 		["@text.underline"] = { fg = shinjuku.shinjuku4_gui, bg = shinjuku.none, style = "underline" },
-		["@text.literal"] = { fg = shinjuku.shinjuku4_gui },
+		["@text.literal"] = { fg = shinjuku.shinjuku13_gui },
 		["@text.uri"] = { fg = shinjuku.shinjuku12_gui, style = "underline" },
 		["@text.strike"] = { fg = shinjuku.shinjuku4_gui, style = "strikethrough" },
 		["@text.math"] = { fg = shinjuku.shinjuku7_gui },
@@ -314,16 +314,16 @@ theme.loadTreeSitter = function()
 	}
 
 	treesitter.TSVariableBuiltin = { fg = shinjuku.shinjuku4_gui, style = bold }
-	treesitter.TSBoolean = { fg = shinjuku.shinjuku9_gui, style = bold }
-	treesitter.TSConstBuiltin = { fg = shinjuku.shinjuku7_gui, style = bold }
+	treesitter.TSBoolean = { fg = shinjuku.shinjuku13_gui, style = bold }
+	treesitter.TSConstBuiltin = { fg = shinjuku.shinjuku13_gui, style = bold }
 	treesitter.TSConstMacro = { fg = shinjuku.shinjuku7_gui, style = bold }
 	treesitter.TSVariable = { fg = shinjuku.shinjuku4_gui, style = bold }
 	treesitter.TSTitle = { fg = shinjuku.shinjuku10_gui, bg = shinjuku.none, style = bold }
 	treesitter["@variable"] = { fg = shinjuku.shinjuku4_gui, style = bold }
 	treesitter["@variable.builtin"] = { fg = shinjuku.shinjuku4_gui, style = bold }
 	treesitter["@variable.global"] = { fg = shinjuku.shinjuku4_gui, style = bold }
-	treesitter["@boolean"] = { fg = shinjuku.shinjuku9_gui, style = bold }
-	treesitter["@constant.builtin"] = { fg = shinjuku.shinjuku7_gui, style = bold }
+	treesitter["@boolean"] = { fg = shinjuku.shinjuku13_gui, style = bold }
+	treesitter["@constant.builtin"] = { fg = shinjuku.shinjuku13_gui, style = bold }
 	treesitter["@constant.macro"] = { fg = shinjuku.shinjuku7_gui, style = bold }
 	treesitter["@text.title"] = { fg = shinjuku.shinjuku10_gui, bg = shinjuku.none, style = bold }
 	treesitter["@text.strong"] = { fg = shinjuku.shinjuku10_gui, bg = shinjuku.none, style = bold }
@@ -342,13 +342,13 @@ theme.loadTreeSitter = function()
 	-- Language keywords
 	treesitter.TSKeyword = { fg = shinjuku.shinjuku9_gui, style = italic } -- For keywords that don't fall in other categories.
 	treesitter.TSKeywordFunction = { fg = shinjuku.shinjuku8_gui, style = italic }
-	treesitter.TSKeywordReturn = { fg = shinjuku.shinjuku8_gui, style = italic }
+	treesitter.TSKeywordReturn = { fg = shinjuku.shinjuku14_gui, style = italic }
 	treesitter.TSKeywordOperator = { fg = shinjuku.shinjuku8_gui, style = italic }
 	treesitter.TSRepeat = { fg = shinjuku.shinjuku9_gui, style = italic } -- For keywords related to loops.
 	-- Strings
 	treesitter.TSString = { fg = shinjuku.shinjuku11_gui, style = italic } -- For strings.
-	treesitter.TSStringRegex = { fg = shinjuku.shinjuku7_gui, style = italic } -- For regexes.
-	treesitter.TSStringEscape = { fg = shinjuku.shinjuku15_gui, style = italic } -- For escape characters within a string.
+	treesitter.TSStringRegex = { fg = shinjuku.shinjuku11_gui, style = italic } -- For regexes.
+	treesitter.TSStringEscape = { fg = shinjuku.shinjuku13_gui, style = italic } -- For escape characters within a string.
 	treesitter.TSCharacter = { fg = shinjuku.shinjuku11_gui, style = italic } -- For characters.
 
 	treesitter["@comment"] = { fg = shinjuku.shinjuku3_gui_bright, style = italic }
@@ -365,8 +365,8 @@ theme.loadTreeSitter = function()
 	treesitter["@keyword.operator"] = { fg = shinjuku.shinjuku8_gui, style = italic }
 	treesitter["@repeat"] = { fg = shinjuku.shinjuku9_gui, style = italic }
 	treesitter["@string"] = { fg = shinjuku.shinjuku11_gui, style = italic }
-	treesitter["@string.regex"] = { fg = shinjuku.shinjuku7_gui, style = italic }
-	treesitter["@string.escape"] = { fg = shinjuku.shinjuku15_gui, style = italic }
+	treesitter["@string.regex"] = { fg = shinjuku.shinjuku11_gui, style = italic }
+	treesitter["@string.escape"] = { fg = shinjuku.shinjuku13_gui, style = italic }
 	treesitter["@character"] = { fg = shinjuku.shinjuku11_gui, style = italic }
 
 	return treesitter
@@ -394,7 +394,7 @@ theme.loadLSP = function()
 
 	local lsp = {
 		LspDiagnosticsDefaultError = { fg = shinjuku.shinjuku_error }, -- used for "Error" diagnostic virtual text
-		LspDiagnosticsSignError = { fg = shinjuku.shinjuku0_gui, bg = shinjuku.shinjuku_error }, -- used for "Error" diagnostic signs in sign column
+		LspDiagnosticsSignError = { fg = shinjuku.background, bg = shinjuku.shinjuku_error }, -- used for "Error" diagnostic signs in sign column
 		LspDiagnosticsFloatingError = { fg = shinjuku.shinjuku11_gui }, -- used for "Error" diagnostic messages in the diagnostics float
 		LspDiagnosticsVirtualTextError = { fg = shinjuku.shinjuku11_gui }, -- Virtual text "Error"
 		LspDiagnosticsUnderlineError = { style = "undercurl", sp = shinjuku.shinjuku11_gui }, -- used to underline "Error" diagnostics.
@@ -493,7 +493,7 @@ theme.loadPlugins = function()
 		TelescopeResultsBorder = { fg = shinjuku.shinjuku4_gui },
 		TelescopePreviewBorder = { fg = shinjuku.shinjuku4_gui },
 		TelescopeSelectionCaret = { fg = shinjuku.shinjuku9_gui },
-		TelescopeSelection = { fg = shinjuku.shinjuku0_gui, bg = shinjuku.shinjuku15_gui },
+		TelescopeSelection = { fg = shinjuku.background, bg = shinjuku.shinjuku15_gui },
 		TelescopeMatching = { link = 'Search' },
 
 		-- NvimTree
@@ -614,7 +614,7 @@ theme.loadPlugins = function()
 		-- Saga End
 
 		-- Sneak
-		Sneak = { fg = shinjuku.shinjuku0_gui, bg = shinjuku.shinjuku4_gui },
+		Sneak = { fg = shinjuku.background, bg = shinjuku.shinjuku4_gui },
 		SneakScope = { bg = shinjuku.shinjuku1_gui },
 
 		-- Cmp
@@ -625,8 +625,8 @@ theme.loadPlugins = function()
 		CmpItemMenu = { fg = shinjuku.shinjuku14_gui },
 
 		-- Indent Blankline
-		IndentBlanklineChar = { fg = shinjuku.shinjuku3_gui },
-		IndentBlanklineContextChar = { fg = shinjuku.shinjuku10_gui },
+		IndentBlanklineIndentChar = { fg = shinjuku.darkest },
+		IndentBlanklineScopeChar = { fg = shinjuku.highlight },
 
 		-- headline
 		-- bg = (10 * shinjuku0 + fg) / 11
@@ -709,7 +709,7 @@ theme.loadPlugins = function()
 
 		-- Statusline
 		StatusLineDull = { fg = shinjuku.shinjuku3_gui, bg = shinjuku.shinjuku1_gui },
-		StatusLineAccent = { fg = shinjuku.shinjuku0_gui, bg = shinjuku.shinjuku13_gui },
+		StatusLineAccent = { fg = shinjuku.background, bg = shinjuku.shinjuku13_gui },
 
 		-- mini.nvim
 		MiniCompletionActiveParameter = { style = "underline" },
@@ -720,7 +720,7 @@ theme.loadPlugins = function()
 		MiniIndentscopeSymbol = { fg = shinjuku.shinjuku10_gui },
 		MiniIndentscopePrefix = { style = "nocombine" }, -- Make it invisible
 
-		MiniJump = { fg = shinjuku.shinjuku0_gui, bg = shinjuku.shinjuku4_gui },
+		MiniJump = { fg = shinjuku.background, bg = shinjuku.shinjuku4_gui },
 
 		MiniJump2dSpot = { fg = shinjuku.shinjuku12_gui, style = "bold,nocombine" },
 
@@ -737,21 +737,21 @@ theme.loadPlugins = function()
 		MiniStatuslineDevinfo = { fg = shinjuku.shinjuku4_gui, bg = shinjuku.shinjuku2_gui },
 		MiniStatuslineFileinfo = { fg = shinjuku.shinjuku4_gui, bg = shinjuku.shinjuku2_gui },
 		MiniStatuslineFilename = { fg = shinjuku.shinjuku4_gui, bg = shinjuku.shinjuku1_gui },
-		MiniStatuslineInactive = { fg = shinjuku.shinjuku4_gui, bg = shinjuku.shinjuku0_gui, style = bold },
-		MiniStatuslineModeCommand = { fg = shinjuku.shinjuku0_gui, bg = shinjuku.shinjuku15_gui, style = bold },
+		MiniStatuslineInactive = { fg = shinjuku.shinjuku4_gui, bg = shinjuku.background, style = bold },
+		MiniStatuslineModeCommand = { fg = shinjuku.background, bg = shinjuku.shinjuku15_gui, style = bold },
 		MiniStatuslineModeInsert = { fg = shinjuku.shinjuku1_gui, bg = shinjuku.shinjuku11_gui, style = bold },
 		MiniStatuslineModeNormal = { fg = shinjuku.shinjuku1_gui, bg = shinjuku.shinjuku14_gui, style = bold },
-		MiniStatuslineModeOther = { fg = shinjuku.shinjuku0_gui, bg = shinjuku.shinjuku13_gui, style = bold },
-		MiniStatuslineModeReplace = { fg = shinjuku.shinjuku0_gui, bg = shinjuku.shinjuku12_gui, style = bold },
-		MiniStatuslineModeVisual = { fg = shinjuku.shinjuku0_gui, bg = shinjuku.shinjuku7_gui, style = bold },
+		MiniStatuslineModeOther = { fg = shinjuku.background, bg = shinjuku.shinjuku13_gui, style = bold },
+		MiniStatuslineModeReplace = { fg = shinjuku.background, bg = shinjuku.shinjuku12_gui, style = bold },
+		MiniStatuslineModeVisual = { fg = shinjuku.background, bg = shinjuku.shinjuku7_gui, style = bold },
 
 		MiniSurround = { link = "IncSearch" },
 
 		MiniTablineCurrent = { bg = shinjuku.shinjuku1_gui },
 		MiniTablineFill = { link = "TabLineFill" },
-		MiniTablineHidden = { bg = shinjuku.shinjuku0_gui, fg = shinjuku.shinjuku3_gui },
+		MiniTablineHidden = { bg = shinjuku.background, fg = shinjuku.shinjuku3_gui },
 		MiniTablineModifiedCurrent = { bg = shinjuku.shinjuku1_gui, fg = shinjuku.shinjuku15_gui },
-		MiniTablineModifiedHidden = { bg = shinjuku.shinjuku0_gui, fg = shinjuku.shinjuku15_gui },
+		MiniTablineModifiedHidden = { bg = shinjuku.background, fg = shinjuku.shinjuku15_gui },
 		MiniTablineModifiedVisible = { bg = shinjuku.shinjuku2_gui, fg = shinjuku.shinjuku15_gui },
 		MiniTablineTabpagesection = { fg = shinjuku.shinjuku10_gui, bg = shinjuku.shinjuku6_gui, style = reverse_bold },
 		MiniTablineVisible = { bg = shinjuku.shinjuku2_gui },
