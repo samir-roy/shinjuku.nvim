@@ -17,6 +17,10 @@ local palette = {
 	yellow = "#ffff87",
 	green = "#00c964",
 
+  sky_blue = "#afd7ff",
+  misty_rose = "#d7afaf",
+  light_cyan = "#afd7d7",
+
 	neon_yellow = "#ffff5f",
   deep_lavender = "#5f5f87",
   deep_pink = '#f54980',

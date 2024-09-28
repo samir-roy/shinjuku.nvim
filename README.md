@@ -70,21 +70,22 @@ require('lualine').setup {
 ## Configuration
 
 | Option                              | Default     | Description                                                                                                                                                     |
-| ----------------------------------- | ----------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| shinjuku_borders                    | `false`     | Enable the border between verticaly split windows visable
-| shinjuku_disable_background         | `false`     | Disable the setting of background color so that NeoVim can use your terminal background
+| ----------------------------------- | ----------- | --------------------------------------------------------------------------
+| shinjuku_borders                    | `false`     | Show borders between verticaly split windows
+| shinjuku_disable_background         | `false`     | Disable the theme background color to use the default terminal background
 | shinjuku_cursorline_transparent     | `false`     | Set the cursorline transparent/visible
-| shinjuku_enable_sidebar_background  | `false`     | Re-enables the background of the sidebar if you disabled the background of everything
-| shinjuku_uniform_diff_background    | `false`     | enables/disables colorful backgrounds when used in *diff* mode
-| shinjuku_italic                     | `true`      | enables/disables italics
-| shinjuku_bold                       | `true`      | enables/disables bold
+| shinjuku_enable_sidebar_background  | `false`     | Re-enables the background of the sidebar when theme background is disabled
+| shinjuku_uniform_diff_background    | `false`     | Use colorful backgrounds in *diff* mode
+| shinjuku_italic                     | `true`      | Allow italics
+| shinjuku_bold                       | `true`      | Allow bold
+| shinjuku_colorful_syntax            | `false`     | Use more colors in syntax highlighting
 
 ```lua
 -- Example config in lua
 vim.g.shinjuku_borders = false
 vim.g.shinjuku_disable_background = false
+vim.g.shinjuku_colorful_syntax = true
 vim.g.shinjuku_italic = false
-vim.g.shinjuku_uniform_diff_background = true
 vim.g.shinjuku_bold = false
 
 -- Load the colorscheme
@@ -95,8 +96,8 @@ require('shinjuku').set()
 " Example config in Vim-Script
 let g:shinjuku_borders = v:false
 let g:shinjuku_disable_background = v:false
+let g:shinjuku_colorful_syntax = v:true
 let g:shinjuku_italic = v:false
-let g:shinjuku_uniform_diff_background = v:true
 let g:shinjuku_bold = v:false
 
 " Load the colorscheme

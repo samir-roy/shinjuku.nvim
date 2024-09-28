@@ -9,11 +9,6 @@ local colors = {
 	dark_text = palette.darker_white,
 	darkest_text = palette.darkest_white,
 
-	syntax_default = palette.white,
-	syntax_function = palette.white,
-	syntax_keyword = palette.white,
-	syntax_param = palette.white,
-
 	comment = palette.gray,
 	string = palette.red,
 	constant = palette.yellow,
@@ -30,6 +25,19 @@ local colors = {
   special = palette.deep_lavender,
 	none = palette.none,
 }
+
+-- Optional fewer colors in syntax highlighting
+if vim.g.shinjuku_colorful_syntax then
+	colors.syntax_default = palette.white
+	colors.syntax_function = palette.light_cyan
+	colors.syntax_keyword = palette.misty_rose
+	colors.syntax_param = palette.sky_blue
+else
+	colors.syntax_default = palette.white
+	colors.syntax_function = palette.white
+	colors.syntax_keyword = palette.white
+	colors.syntax_param = palette.white
+end
 
 -- Optional contrast sidebars, floating windows and popup menus
 if vim.g.shinjuku_contrast then
