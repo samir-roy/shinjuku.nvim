@@ -1,47 +1,52 @@
 local palette = require("shinjuku.palette")
 
-local shinjuku = {
+local colors = {
 	background = palette.black,
-	shinjuku1_gui = palette.dark_gray,
-	shinjuku2_gui = palette.gray,
-	shinjuku3_gui = palette.light_gray,
-	shinjuku3_gui_bright = palette.gray,
-	shinjuku4_gui = palette.darkest_white,
-	text = palette.darker_white,
-	shinjuku6_gui = palette.white,
-	shinjuku7_gui = palette.white,
-	shinjuku8_gui = palette.white,
-	shinjuku9_gui = palette.white,
-	shinjuku10_gui = palette.white,
-	shinjuku11_gui = palette.red,
-	shinjuku12_gui = palette.orange,
-	shinjuku13_gui = palette.yellow,
-	shinjuku14_gui = palette.green,
-	shinjuku15_gui = palette.neon_yellow,
-  shinjuku_bracket = palette.silver,
-  shinjuku_error = palette.deep_pink,
-  black = palette.pure_black,
-  darkest = palette.darkest_gray,
-  special = palette.deep_lavender,
+	dark_background = palette.dark_gray,
+	light_background = palette.gray,
+
+	inactive_text = palette.light_gray,
+	dark_text = palette.darker_white,
+	darkest_text = palette.darkest_white,
+
+	syntax_default = palette.white,
+	syntax_function = palette.white,
+	syntax_keyword = palette.white,
+	syntax_param = palette.white,
+
+	comment = palette.gray,
+	string = palette.red,
+	constant = palette.yellow,
+  bracket = palette.silver,
+
+	success = palette.green,
+	warning = palette.neon_yellow,
+  error = palette.deep_pink,
+
+	substitute = palette.orange,
   highlight = palette.blue,
+  darkest = palette.darkest_gray,
+  black = palette.pure_black,
+  special = palette.deep_lavender,
 	none = palette.none,
 }
 
--- Enable contrast sidebars, floating windows and popup menus
+-- Optional contrast sidebars, floating windows and popup menus
 if vim.g.shinjuku_contrast then
-	shinjuku.sidebar = shinjuku.shinjuku1_gui
-	shinjuku.float = shinjuku.shinjuku1_gui
+	colors.sidebar = colors.dark_background
+	colors.float = colors.dark_background
 else
-	shinjuku.sidebar = shinjuku.background
-	shinjuku.float = shinjuku.background
+	colors.sidebar = colors.background
+	colors.float = colors.background
 end
 
+-- Optional darker background for cursor line
 if vim.g.shinjuku_cursorline_transparent then
-	shinjuku.cursorlinebg = shinjuku.background
-	shinjuku.cursorlinefg = shinjuku.none
+	colors.cursorlinebg = palette.none
+	colors.cursorlinefg = palette.none
 else
-	shinjuku.cursorlinebg = shinjuku.shinjuku11_gui
-	shinjuku.cursorlinefg = shinjuku.background
+	colors.cursorlinebg = palette.darker_than_black
+	colors.cursorlinefg = palette.none
 end
 
-return shinjuku
+return colors

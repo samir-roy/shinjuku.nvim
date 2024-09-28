@@ -1,5 +1,6 @@
 local palette = {
   pure_black = "#000000",
+  darker_than_black = "#121212",
 	black = "#1c1c1c",
   darkest_gray = '#262626',
 	dark_gray = "#303030",
@@ -10,9 +11,9 @@ local palette = {
 	darker_white = "#c6c6c6",
 	white = "#d0d0d0",
 
-	blue = "#2284d9",
+	blue = "#00d7ff",
 	red = "#ff99af",
-	orange = "#ff005f",
+	orange = "#ff8700",
 	yellow = "#ffff87",
 	green = "#00c964",
 

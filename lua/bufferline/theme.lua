@@ -2,10 +2,10 @@ local colors = require("shinjuku.colors")
 
 local setting = {
 	fill = colors.background,
-	indicator = colors.shinjuku9_gui,
+	indicator = colors.syntax_default,
 	bg = colors.background,
 	buffer_bg = colors.background,
-	buffer_bg_selected = colors.shinjuku1_gui,
+	buffer_bg_selected = colors.dark_background,
 	buffer_bg_visible = "#2A2F3A",
 	bold = true,
 	italic = true,
