@@ -1,5 +1,5 @@
 local util = {}
-local shinjuku = require("shinjuku.theme")
+local theme = require("shinjuku.theme")
 
 -- Go trough the table and highlight the group with the color values
 util.highlight = function(group, color)
@@ -53,10 +53,10 @@ function util.load()
   vim.g.colors_name = "shinjuku"
 
   -- load the most importaint parts of the theme
-  local editor = shinjuku.loadEditor()
-  local syntax = shinjuku.loadSyntax()
-  local treesitter = shinjuku.loadTreeSitter()
-  local filetypes = shinjuku.loadFiletypes()
+  local editor = theme.loadEditor()
+  local syntax = theme.loadSyntax()
+  local treesitter = theme.loadTreeSitter()
+  local filetypes = theme.loadFiletypes()
 
   -- load editor highlights
   util.loadColorSet(editor)
@@ -70,11 +70,11 @@ function util.load()
   -- load filetype-specific highlights
   util.loadColorSet(filetypes)
 
-  shinjuku.loadTerminal()
+  theme.loadTerminal()
 
   -- imort tables for plugins and lsp
-  local plugins = shinjuku.loadPlugins()
-  local lsp = shinjuku.loadLSP()
+  local plugins = theme.loadPlugins()
+  local lsp = theme.loadLSP()
 
   -- load plugin highlights
   util.loadColorSet(plugins)

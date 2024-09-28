@@ -1,4 +1,4 @@
-local shinjuku = {
+local palette = {
   pure_black = "#000000",
 	black = "#1c1c1c",
   darkest_gray = '#262626',
@@ -23,4 +23,4 @@ local shinjuku = {
 	none = "NONE",
 }
 
-return shinjuku
+return palette
