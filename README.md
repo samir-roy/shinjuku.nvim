@@ -2,7 +2,8 @@
 
 ## NeoVim dark color scheme with subtle syntax highlighting and neon markers
 
-![screenshot](screenshot.png | width=632)
+<img src="screenshot.png" width="632px">
+
 
 ## Credits
 
