@@ -8,10 +8,10 @@ local bufferline = require("bufferline.theme")
 local installColorfulToggleCommand = function()
   -- function to reapply theme when changing syntax highlighting colorful mode
   function ShinjukuToggleColorfulSyntax()
-    if vim.g.shinjuku_colorful_syntax then
-      vim.g.shinjuku_colorful_syntax = false
+    if vim.g.shinjuku_minimal_syntax then
+      vim.g.shinjuku_minimal_syntax = false
     else
-      vim.g.shinjuku_colorful_syntax = true
+      vim.g.shinjuku_minimal_syntax = true
     end
 
     require("shinjuku.util").reapply()

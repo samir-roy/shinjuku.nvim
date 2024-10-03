@@ -67,10 +67,10 @@ require('lualine').setup {
 }
 ```
 
-By default the theme sets minimal syntax highlighting. To use more colorful syntax highlighting
-enable the `shinjuku_colorful_syntax` setting as described in the configuration section below.
-In addition, the `:ShinjukuToggleColorfulSyntax` command can be used to toggle colorful syntax
-on and off, without changing the configuration or reloading Neovim.
+By default the theme uses colorful syntax highlighting. To use more minimal syntax highlighting
+disable the `shinjuku_minimal_syntax` setting as described in the configuration section below.
+In addition, the `:ShinjukuToggleColorfulSyntax` command can be used to toggle between colorful
+and minimal syntax highlighting, without changing the configuration or reloading Neovim.
 
 ## Configuration
 
@@ -83,13 +83,13 @@ on and off, without changing the configuration or reloading Neovim.
 | shinjuku_uniform_diff_background    | `false`     | Use colorful backgrounds in *diff* mode
 | shinjuku_italic                     | `true`      | Allow italics
 | shinjuku_bold                       | `true`      | Allow bold
-| shinjuku_colorful_syntax            | `false`     | Use more colors in syntax highlighting
+| shinjuku_minimal_syntax             | `false`     | Use fewer colors in syntax highlighting
 
 ```lua
 -- Example config in lua
 vim.g.shinjuku_borders = false
 vim.g.shinjuku_disable_background = false
-vim.g.shinjuku_colorful_syntax = true
+vim.g.shinjuku_minimal_syntax = true
 vim.g.shinjuku_italic = false
 vim.g.shinjuku_bold = false
 
@@ -101,7 +101,7 @@ require('shinjuku').set()
 " Example config in Vim-Script
 let g:shinjuku_borders = v:false
 let g:shinjuku_disable_background = v:false
-let g:shinjuku_colorful_syntax = v:true
+let g:shinjuku_minimal_syntax = v:true
 let g:shinjuku_italic = v:false
 let g:shinjuku_bold = v:false
 

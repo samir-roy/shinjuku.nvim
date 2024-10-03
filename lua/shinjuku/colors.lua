@@ -27,18 +27,18 @@ local colors = {
 }
 
 -- Optional fewer colors in syntax highlighting
-if vim.g.shinjuku_colorful_syntax then
-  colors.syntax_default = palette.white
-  colors.syntax_function = palette.light_cyan
-  colors.syntax_keyword = palette.misty_rose
-  colors.syntax_param = palette.sea_green
-  colors.syntax_tag = palette.light_cyan
-else
+if vim.g.shinjuku_minimal_syntax then
   colors.syntax_default = palette.white
   colors.syntax_function = palette.white
   colors.syntax_keyword = palette.white
   colors.syntax_param = palette.white
   colors.syntax_tag = palette.white
+else
+  colors.syntax_default = palette.white
+  colors.syntax_function = palette.light_cyan
+  colors.syntax_keyword = palette.misty_rose
+  colors.syntax_param = palette.sea_green
+  colors.syntax_tag = palette.light_cyan
 end
 
 -- Optional contrast sidebars, floating windows and popup menus
