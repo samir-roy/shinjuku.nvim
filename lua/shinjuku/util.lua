@@ -61,18 +61,12 @@ function util.loadColorSet(colorSet)
   end
 end
 
--- Load the theme
-function util.load()
-  local theme = require("shinjuku.theme")
+function util.reapply()
+  -- ensure package is reloaded to change color variables
+  package.loaded['shinjuku.colors'] = nil
+  package.loaded['shinjuku.theme'] = nil
 
-  -- set the theme environment
-  vim.cmd("hi clear")
-  if vim.fn.exists("syntax_on") then
-    vim.cmd("syntax reset")
-  end
-  vim.o.background = "dark"
-  vim.o.termguicolors = true
-  vim.g.colors_name = "shinjuku"
+  local theme = require("shinjuku.theme")
 
   -- load editor highlights
   util.loadColorSet(theme.loadEditor())
@@ -96,6 +90,21 @@ function util.load()
   if vim.g.shinjuku_contrast == true then
     util.contrast()
   end
+end
+
+-- Load the theme
+function util.load()
+  -- set the theme environment
+  vim.cmd("hi clear")
+  if vim.fn.exists("syntax_on") then
+    vim.cmd("syntax reset")
+  end
+  vim.o.background = "dark"
+  vim.o.termguicolors = true
+  vim.g.colors_name = "shinjuku"
+
+  -- apply color sets
+  util.reapply()
 end
 
 return util
