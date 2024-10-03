@@ -1,5 +1,4 @@
 local util = {}
-local theme = require("shinjuku.theme")
 
 -- Go trough the table and highlight the group with the color values
 util.highlight = function(group, color)
@@ -64,6 +63,8 @@ end
 
 -- Load the theme
 function util.load()
+  local theme = require("shinjuku.theme")
+
   -- set the theme environment
   vim.cmd("hi clear")
   if vim.fn.exists("syntax_on") then

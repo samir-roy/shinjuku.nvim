@@ -31,7 +31,7 @@ if vim.g.shinjuku_colorful_syntax then
 	colors.syntax_default = palette.white
 	colors.syntax_function = palette.light_cyan
 	colors.syntax_keyword = palette.misty_rose
-	colors.syntax_param = palette.sky_blue
+	colors.syntax_param = palette.sea_green
 else
 	colors.syntax_default = palette.white
 	colors.syntax_function = palette.white

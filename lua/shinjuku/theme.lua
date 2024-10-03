@@ -43,7 +43,7 @@ theme.loadSyntax = function()
 		Delimiter = { fg = colors.syntax_function }, -- character that needs attention like , or .
 		SpecialComment = { fg = colors.syntax_keyword }, -- special things inside a comment
 		Debug = { fg = colors.string }, -- debugging statements
-		Underlined = { fg = colors.success, bg = colors.none, style = "underline" }, -- text that stands out, HTML links
+		Underlined = { fg = colors.highlight, bg = colors.none, style = "underline" }, -- text that stands out, HTML links
 		Ignore = { fg = colors.dark_background }, -- left blank, hidden
 		Todo = { fg = colors.constant, bg = colors.none, style = bold_italic }, -- anything that needs extra attention; mostly the keywords TODO FIXME and XXX
 		Conceal = { fg = colors.none, bg = colors.background },
@@ -278,16 +278,16 @@ theme.loadTreeSitter = function()
 		["@error"] = { fg = colors.error },
 		["@exception"] = { fg = colors.warning },
 		["@funtion.macro"] = { fg = colors.syntax_function },
-		["@include"] = { fg = colors.syntax_default },
+		["@include"] = { fg = colors.syntax_param },
 		["@label"] = { fg = colors.warning },
-		["@operator"] = { fg = colors.syntax_default },
+		["@operator"] = { fg = colors.syntax_keyword },
 		["@parameter"] = { fg = colors.syntax_param },
 		["@punctuation.delimiter"] = { fg = colors.syntax_keyword },
 		["@punctuation.bracket"] = { fg = colors.bracket },
 		["@punctuation.special"] = { fg = colors.syntax_keyword },
 		["@symbol"] = { fg = colors.constant },
-		["@type"] = { fg = colors.syntax_default },
-		["@type.builtin"] = { fg = colors.syntax_default },
+		["@type"] = { fg = colors.syntax_param },
+		["@type.builtin"] = { fg = colors.syntax_param },
 		["@tag"] = { fg = colors.darkest_text },
 		["@tag.delimiter"] = { fg = colors.light_background },
 		["@text"] = { fg = colors.darkest_text },
@@ -352,14 +352,14 @@ theme.loadTreeSitter = function()
 	treesitter.TSCharacter = { fg = colors.string, style = italic } -- For characters.
 
 	treesitter["@comment"] = { fg = colors.comment, style = italic }
-	treesitter["@conditional"] = { fg = colors.syntax_default, style = italic }
+	treesitter["@conditional"] = { fg = colors.highlight, style = italic }
 	treesitter["@function"] = { fg = colors.syntax_function, style = italic }
 	treesitter["@method"] = { fg = colors.syntax_function, style = italic }
 	treesitter["@function.builtin"] = { fg = colors.syntax_keyword, style = italic }
 	treesitter["@namespace"] = { fg = colors.darkest_text, style = italic }
 	treesitter["@field"] = { fg = colors.darkest_text, style = italic }
 	treesitter["@property"] = { fg = colors.syntax_param, style = italic }
-	treesitter["@keyword"] = { fg = colors.syntax_default, style = italic }
+	treesitter["@keyword"] = { fg = colors.syntax_keyword, style = italic }
 	treesitter["@keyword.function"] = { fg = colors.syntax_keyword, style = italic }
 	treesitter["@keyword.return"] = { fg = colors.syntax_keyword, style = italic }
 	treesitter["@keyword.operator"] = { fg = colors.syntax_keyword, style = italic }
