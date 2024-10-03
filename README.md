@@ -67,6 +67,11 @@ require('lualine').setup {
 }
 ```
 
+By default the theme sets minimal syntax highlighting. To use more colorful syntax highlighting
+enable the `shinjuku_colorful_syntax` setting as described in the configuration section below.
+In addition, the `:ShinjukuToggleColorfulSyntax` command can be used to toggle colorful syntax
+on and off, without changing the configuration or reloading Neovim.
+
 ## Configuration
 
 | Option                              | Default     | Description                                                                                                                                                     |
