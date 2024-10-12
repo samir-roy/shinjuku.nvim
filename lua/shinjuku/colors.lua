@@ -47,7 +47,7 @@ if vim.g.shinjuku_contrast then
   colors.float = colors.dark_background
 else
   colors.sidebar = colors.background
-  colors.float = colors.background
+  colors.float = colors.none
 end
 
 -- Optional darker background for cursor line
