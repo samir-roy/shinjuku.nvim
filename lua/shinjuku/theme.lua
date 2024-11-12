@@ -42,22 +42,22 @@ theme.loadSyntax = function()
 		Tag = { fg = colors.darkest_text }, -- you can use CTRL-] on this
 		Delimiter = { fg = colors.syntax_function }, -- character that needs attention like , or .
 		SpecialComment = { fg = colors.syntax_keyword }, -- special things inside a comment
-		Debug = { fg = colors.string }, -- debugging statements
+		Debug = { fg = colors.delete }, -- debugging statements
 		Underlined = { fg = colors.highlight, bg = colors.none, style = "underline" }, -- text that stands out, HTML links
 		Ignore = { fg = colors.dark_background }, -- left blank, hidden
 		Todo = { fg = colors.constant, bg = colors.none, style = bold_italic }, -- anything that needs extra attention; mostly the keywords TODO FIXME and XXX
 		Conceal = { fg = colors.none, bg = colors.background },
 		htmlLink = { fg = colors.highlight, style = "underline" },
 		markdownH1Delimiter = { fg = colors.syntax_keyword },
-		markdownH2Delimiter = { fg = colors.string },
+		markdownH2Delimiter = { fg = colors.delete },
 		markdownH3Delimiter = { fg = colors.success },
 		htmlH1 = { fg = colors.syntax_keyword, style = bold },
-		htmlH2 = { fg = colors.string, style = bold },
+		htmlH2 = { fg = colors.delete, style = bold },
 		htmlH3 = { fg = colors.success, style = bold },
 		htmlH4 = { fg = colors.warning, style = bold },
 		htmlH5 = { fg = colors.syntax_default, style = bold },
 		markdownH1 = { fg = colors.syntax_keyword, style = bold },
-		markdownH2 = { fg = colors.string, style = bold },
+		markdownH2 = { fg = colors.delete, style = bold },
 		markdownH3 = { fg = colors.success, style = bold },
 		Error = { fg = colors.error, bg = colors.none, style = bold_underline }, -- any erroneous construct with bold
 		Comment = { fg = colors.comment, style = italic }, -- italic comments
@@ -93,7 +93,7 @@ theme.loadEditor = function()
 		MoreMsg = { fg = colors.darkest_text },
 		NonText = { fg = colors.dark_background },
 		Pmenu = { fg = colors.background, bg = colors.special },
-		PmenuSel = { fg = colors.background, bg = colors.string },
+		PmenuSel = { fg = colors.background, bg = colors.delete },
 		PmenuSbar = { fg = colors.darkest_text, bg = colors.background },
 		PmenuThumb = { fg = colors.darkest_text, bg = colors.success },
 		Question = { fg = colors.success },
@@ -102,7 +102,7 @@ theme.loadEditor = function()
 		Search = { fg = colors.background, bg = colors.highlight },
 		Substitute = { fg = colors.background, bg = colors.substitute },
 		SpecialKey = { fg = colors.syntax_default },
-		SpellBad = { fg = colors.string, bg = colors.none, style = italic_undercurl },
+		SpellBad = { fg = colors.delete, bg = colors.none, style = italic_undercurl },
 		SpellCap = { fg = colors.syntax_function, bg = colors.none, style = italic_undercurl },
 		SpellLocal = { fg = colors.syntax_keyword, bg = colors.none, style = italic_undercurl },
 		SpellRare = { fg = colors.syntax_default, bg = colors.none, style = italic_undercurl },
@@ -125,11 +125,11 @@ theme.loadEditor = function()
 		NormalMode = { fg = colors.warning, bg = colors.none, style = "reverse" },
 		InsertMode = { fg = colors.success, bg = colors.none, style = "reverse" },
 		ReplacelMode = { fg = colors.substitute, bg = colors.none, style = "reverse" },
-		VisualMode = { fg = colors.string, bg = colors.none, style = "reverse" },
+		VisualMode = { fg = colors.delete, bg = colors.none, style = "reverse" },
 		CommandMode = { fg = colors.darkest_text, bg = colors.none, style = "reverse" },
 		Warnings = { fg = colors.warning },
 
-		healthError = { fg = colors.string },
+		healthError = { fg = colors.delete },
 		healthSuccess = { fg = colors.success },
 		healthWarning = { fg = colors.warning },
 
@@ -147,29 +147,29 @@ theme.loadEditor = function()
 		BufferCurrentIcon = { bg = colors.dark_background },
 		BufferCurrentSign = { bg = colors.dark_background },
 		BufferCurrentIndex = { bg = colors.dark_background },
-		BufferCurrentTarget = { bg = colors.dark_background, fg = colors.string },
+		BufferCurrentTarget = { bg = colors.dark_background, fg = colors.delete },
 
 		BufferInactive = { bg = colors.background, fg = colors.inactive_text },
 		BufferInactiveMod = { bg = colors.background, fg = colors.warning },
 		BufferInactiveIcon = { bg = colors.background, fg = colors.inactive_text },
 		BufferInactiveSign = { bg = colors.background, fg = colors.inactive_text },
 		BufferInactiveIndex = { bg = colors.background, fg = colors.inactive_text },
-		BufferInactiveTarget = { bg = colors.background, fg = colors.string },
+		BufferInactiveTarget = { bg = colors.background, fg = colors.delete },
 
 		BufferVisible = { bg = colors.light_background },
 		BufferVisibleMod = { bg = colors.light_background, fg = colors.warning },
 		BufferVisibleIcon = { bg = colors.light_background },
 		BufferVisibleSign = { bg = colors.light_background },
 		BufferVisibleIndex = { bg = colors.light_background },
-		BufferVisibleTarget = { bg = colors.light_background, fg = colors.string },
+		BufferVisibleTarget = { bg = colors.light_background, fg = colors.delete },
 
 		-- nvim-notify
 		NotifyDEBUGBorder = { fg = colors.inactive_text },
 		NotifyDEBUGIcon = { fg = colors.inactive_text },
 		NotifyDEBUGTitle = { fg = colors.inactive_text },
-		NotifyERRORBorder = { fg = colors.string },
-		NotifyERRORIcon = { fg = colors.string },
-		NotifyERRORTitle = { fg = colors.string },
+		NotifyERRORBorder = { fg = colors.delete },
+		NotifyERRORIcon = { fg = colors.delete },
+		NotifyERRORTitle = { fg = colors.delete },
 		NotifyINFOBorder = { fg = colors.success },
 		NotifyINFOIcon = { fg = colors.success },
 		NotifyINFOTitle = { fg = colors.success },
@@ -207,12 +207,12 @@ theme.loadEditor = function()
 	if vim.g.shinjuku_uniform_diff_background then
 		editor.DiffAdd = { fg = colors.success, bg = colors.dark_background } -- diff mode: Added line
 		editor.DiffChange = { fg = colors.constant, bg = colors.dark_background } -- diff mode: Changed line
-		editor.DiffDelete = { fg = colors.string, bg = colors.dark_background } -- diff mode: Deleted line
+		editor.DiffDelete = { fg = colors.delete, bg = colors.dark_background } -- diff mode: Deleted line
 		editor.DiffText = { fg = colors.warning, bg = colors.dark_background } -- diff mode: Changed text within a changed line
 	else
 		editor.DiffAdd = { fg = colors.success, bg = colors.none, style = "reverse" } -- diff mode: Added line
 		editor.DiffChange = { fg = colors.constant, bg = colors.none, style = "reverse" } -- diff mode: Changed line
-		editor.DiffDelete = { fg = colors.string, bg = colors.none, style = "reverse" } -- diff mode: Deleted line
+		editor.DiffDelete = { fg = colors.delete, bg = colors.none, style = "reverse" } -- diff mode: Deleted line
 		editor.DiffText = { fg = colors.warning, bg = colors.none, style = "reverse" } -- diff mode: Changed text within a changed line
 	end
 
@@ -221,7 +221,7 @@ end
 
 -- theme.loadTerminal = function()
 	-- vim.g.terminal_color_0 = colors.dark_background
-	-- vim.g.terminal_color_1 = colors.string
+	-- vim.g.terminal_color_1 = colors.delete
 	-- vim.g.terminal_color_2 = colors.success
 	-- vim.g.terminal_color_3 = colors.constant
 	-- vim.g.terminal_color_4 = colors.syntax_default
@@ -229,7 +229,7 @@ end
 	-- vim.g.terminal_color_6 = colors.syntax_keyword
 	-- vim.g.terminal_color_7 = colors.dark_text
 	-- vim.g.terminal_color_8 = colors.inactive_text
-	-- vim.g.terminal_color_9 = colors.string
+	-- vim.g.terminal_color_9 = colors.delete
 	-- vim.g.terminal_color_10 = colors.success
 	-- vim.g.terminal_color_11 = colors.constant
 	-- vim.g.terminal_color_12 = colors.syntax_default
@@ -269,7 +269,7 @@ theme.loadTreeSitter = function()
 		TSUnderline = { fg = colors.darkest_text, bg = colors.none, style = "underline" }, -- For text to be represented with an underline.
 		TSLiteral = { fg = colors.constant }, -- Literal text.
 		TSURI = { fg = colors.highlight }, -- Any URI like a link or email.
-		TSAnnotation = { fg = colors.string }, -- For C++/Dart attributes, annotations that can be attached to the code to denote some kind of meta information.
+		TSAnnotation = { fg = colors.delete }, -- For C++/Dart attributes, annotations that can be attached to the code to denote some kind of meta information.
 		["@constructor"] = { fg = colors.syntax_default },
 		["@constant"] = { fg = colors.constant },
 		["@float"] = { fg = colors.constant },
@@ -396,9 +396,9 @@ theme.loadLSP = function()
 	local lsp = {
 		LspDiagnosticsDefaultError = { fg = colors.error }, -- used for "Error" diagnostic virtual text
 		LspDiagnosticsSignError = { fg = colors.background, bg = colors.error }, -- used for "Error" diagnostic signs in sign column
-		LspDiagnosticsFloatingError = { fg = colors.string }, -- used for "Error" diagnostic messages in the diagnostics float
-		LspDiagnosticsVirtualTextError = { fg = colors.string }, -- Virtual text "Error"
-		LspDiagnosticsUnderlineError = { style = "undercurl", sp = colors.string }, -- used to underline "Error" diagnostics.
+		LspDiagnosticsFloatingError = { fg = colors.delete }, -- used for "Error" diagnostic messages in the diagnostics float
+		LspDiagnosticsVirtualTextError = { fg = colors.delete }, -- Virtual text "Error"
+		LspDiagnosticsUnderlineError = { style = "undercurl", sp = colors.delete }, -- used to underline "Error" diagnostics.
 		LspDiagnosticsDefaultWarning = { fg = colors.warning }, -- used for "Warning" diagnostic signs in sign column
 		LspDiagnosticsSignWarning = { fg = colors.warning }, -- used for "Warning" diagnostic signs in sign column
 		LspDiagnosticsFloatingWarning = { fg = colors.warning }, -- used for "Warning" diagnostic messages in the diagnostics float
@@ -455,7 +455,7 @@ theme.loadPlugins = function()
 
 		-- Diff
 		diffAdded = { fg = colors.success },
-		diffRemoved = { fg = colors.string },
+		diffRemoved = { fg = colors.delete },
 		diffChanged = { fg = colors.warning },
 		diffOldFile = { fg = colors.yellow },
 		diffNewFile = { fg = colors.substitute },
@@ -469,13 +469,13 @@ theme.loadPlugins = function()
 		NeogitHunkHeader = { fg = colors.syntax_keyword },
 		NeogitHunkHeaderHighlight = { fg = colors.syntax_keyword, bg = colors.dark_background },
 		NeogitDiffContextHighlight = { bg = colors.dark_background },
-		NeogitDiffDeleteHighlight = { fg = colors.string, style = "reverse" },
+		NeogitDiffDeleteHighlight = { fg = colors.delete, style = "reverse" },
 		NeogitDiffAddHighlight = { fg = colors.success, style = "reverse" },
 
 		-- GitGutter
 		GitGutterAdd = { fg = colors.success }, -- diff mode: Added line |diff.txt|
 		GitGutterChange = { fg = colors.constant }, -- diff mode: Changed line |diff.txt|
-		GitGutterDelete = { fg = colors.string }, -- diff mode: Deleted line |diff.txt|
+		GitGutterDelete = { fg = colors.delete }, -- diff mode: Deleted line |diff.txt|
 
 		-- GitSigns
 		GitSignsAdd = { fg = colors.success }, -- diff mode: Added line |diff.txt|
@@ -484,9 +484,9 @@ theme.loadPlugins = function()
 		GitSignsChange = { fg = colors.constant }, -- diff mode: Changed line |diff.txt|
 		GitSignsChangeNr = { fg = colors.constant }, -- diff mode: Changed line |diff.txt|
 		GitSignsChangeLn = { fg = colors.constant }, -- diff mode: Changed line |diff.txt|
-		GitSignsDelete = { fg = colors.string }, -- diff mode: Deleted line |diff.txt|
-		GitSignsDeleteNr = { fg = colors.string }, -- diff mode: Deleted line |diff.txt|
-		GitSignsDeleteLn = { fg = colors.string }, -- diff mode: Deleted line |diff.txt|
+		GitSignsDelete = { fg = colors.delete }, -- diff mode: Deleted line |diff.txt|
+		GitSignsDeleteNr = { fg = colors.delete }, -- diff mode: Deleted line |diff.txt|
+		GitSignsDeleteLn = { fg = colors.delete }, -- diff mode: Deleted line |diff.txt|
 		GitSignsCurrentLineBlame = { fg = colors.comment, style = bold },
 
 		-- Telescope
@@ -515,7 +515,7 @@ theme.loadPlugins = function()
 		NvimTreeGitMerge = { fg = colors.constant }, -- diff mode: Changed line |diff.txt|
 		NvimTreeGitRenamed = { fg = colors.constant }, -- diff mode: Changed line |diff.txt|
 		NvimTreeGitNew = { fg = colors.success }, -- diff mode: Added line |diff.txt|
-		NvimTreeGitDeleted = { fg = colors.string },	-- diff mode: Deleted line |diff.txt|
+		NvimTreeGitDeleted = { fg = colors.delete },	-- diff mode: Deleted line |diff.txt|
 		NvimTreeGitIgnored = { fg = colors.comment },
 		LspDiagnosticsError = { fg = colors.error },
 		LspDiagnosticsWarning = { fg = colors.warning },
@@ -608,7 +608,7 @@ theme.loadPlugins = function()
 		LSOutlinePreviewBorder = { fg = colors.darkest_text, bg = colors.float },
 		OutlineIndentEvn = { fg = colors.warning },
 		OutlineIndentOdd = { fg = colors.substitute },
-		OutlineFoldPrefix = { fg = colors.string },
+		OutlineFoldPrefix = { fg = colors.delete },
 		OutlineDetail = { fg = colors.darkest_text },
 		-- LspSaga all floatwindow
 		LspFloatWinNormal = { fg = colors.darkest_text, bg = colors.float },
@@ -666,9 +666,9 @@ theme.loadPlugins = function()
 		DapUISource = { fg = colors.syntax_default },
 		DapUILineNumber = { fg = colors.syntax_keyword },
 		DapUIFloatBorder = { fg = colors.syntax_keyword },
-		DapUIWatchesEmpty = { fg = colors.string },
+		DapUIWatchesEmpty = { fg = colors.delete },
 		DapUIWatchesValue = { fg = colors.syntax_keyword },
-		DapUIWatchesError = { fg = colors.string },
+		DapUIWatchesError = { fg = colors.delete },
 		DapUIBreakpointsPath = { fg = colors.syntax_keyword },
 		DapUIBreakpointsInfo = { fg = colors.syntax_keyword },
 		DapUIBreakpointsCurrentLine = { fg = colors.syntax_keyword },
@@ -686,7 +686,7 @@ theme.loadPlugins = function()
 		-- nvim-ts-rainbow
 		rainbowcol1 = { fg = colors.warning },
 		rainbowcol2 = { fg = colors.constant },
-		rainbowcol3 = { fg = colors.string },
+		rainbowcol3 = { fg = colors.delete },
 		rainbowcol4 = { fg = colors.syntax_function },
 		rainbowcol5 = { fg = colors.syntax_keyword },
 		rainbowcol6 = { fg = colors.warning },
@@ -740,7 +740,7 @@ theme.loadPlugins = function()
 		MiniStatuslineFilename = { fg = colors.darkest_text, bg = colors.dark_background },
 		MiniStatuslineInactive = { fg = colors.darkest_text, bg = colors.background, style = bold },
 		MiniStatuslineModeCommand = { fg = colors.background, bg = colors.warning, style = bold },
-		MiniStatuslineModeInsert = { fg = colors.dark_background, bg = colors.string, style = bold },
+		MiniStatuslineModeInsert = { fg = colors.dark_background, bg = colors.delete, style = bold },
 		MiniStatuslineModeNormal = { fg = colors.dark_background, bg = colors.success, style = bold },
 		MiniStatuslineModeOther = { fg = colors.background, bg = colors.constant, style = bold },
 		MiniStatuslineModeReplace = { fg = colors.background, bg = colors.substitute, style = bold },
@@ -758,10 +758,10 @@ theme.loadPlugins = function()
 		MiniTablineVisible = { bg = colors.light_background },
 
 		MiniTestEmphasis = { style = bold },
-		MiniTestFail = { fg = colors.string, style = bold },
+		MiniTestFail = { fg = colors.delete, style = bold },
 		MiniTestPass = { fg = colors.success, style = bold },
 
-		MiniTrailspace = { bg = colors.string },
+		MiniTrailspace = { bg = colors.delete },
 
 		-- Aerail
 		AerialLine = { bg = colors.light_background },

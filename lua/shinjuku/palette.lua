@@ -10,6 +10,7 @@ local palette = {
   darkest_white = "#bcbcbc",
   darker_white = "#c6c6c6",
   white = "#d0d0d0",
+  bright_white = "#dadada",
 
   blue = "#00d7ff",
   red = "#ff99af",

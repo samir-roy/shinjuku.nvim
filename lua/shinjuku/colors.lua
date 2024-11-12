@@ -10,7 +10,7 @@ local colors = {
   darkest_text = palette.darkest_white,
 
   comment = palette.gray,
-  string = palette.red,
+  delete = palette.red,
   constant = palette.yellow,
   bracket = palette.silver,
 
@@ -30,15 +30,17 @@ local colors = {
 if vim.g.shinjuku_minimal_syntax then
   colors.syntax_default = palette.white
   colors.syntax_function = palette.white
-  colors.syntax_keyword = palette.white
+  colors.syntax_keyword = palette.bright_white
   colors.syntax_param = palette.white
   colors.syntax_tag = palette.white
+  colors.string = palette.light_cyan
 else
   colors.syntax_default = palette.white
   colors.syntax_function = palette.light_cyan
   colors.syntax_keyword = palette.misty_rose
   colors.syntax_param = palette.sea_green
   colors.syntax_tag = palette.light_cyan
+  colors.string = palette.red
 end
 
 -- Optional contrast sidebars, floating windows and popup menus

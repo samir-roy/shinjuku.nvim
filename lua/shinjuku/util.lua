@@ -45,8 +45,8 @@ function util.dynamicCursorLine()
     end
 
     function ShinjukuLeaveInsertMode()
-      vim.cmd("highlight CursorLine guibg=" .. colors.string .. " guifg=BLACK")
-      vim.cmd("highlight CursorLineNr guibg=" .. colors.string .. " guifg=BLACK")
+      vim.cmd("highlight CursorLine guibg=" .. colors.delete .. " guifg=BLACK")
+      vim.cmd("highlight CursorLineNr guibg=" .. colors.delete .. " guifg=BLACK")
     end
 
     vim.cmd("autocmd InsertEnter * lua ShinjukuEnterInsertMode()")
