@@ -33,13 +33,13 @@ if vim.g.shinjuku_minimal_syntax then
   colors.syntax_keyword = palette.bright_white
   colors.syntax_param = palette.white
   colors.syntax_tag = palette.white
-  colors.string = palette.light_cyan
+  colors.string = palette.sky_blue
 else
   colors.syntax_default = palette.white
-  colors.syntax_function = palette.light_cyan
-  colors.syntax_keyword = palette.misty_rose
-  colors.syntax_param = palette.sea_green
-  colors.syntax_tag = palette.light_cyan
+  colors.syntax_function = palette.sea_green
+  colors.syntax_keyword = palette.light_cyan
+  colors.syntax_param = palette.sky_blue
+  colors.syntax_tag = palette.sea_green
   colors.string = palette.red
 end
 

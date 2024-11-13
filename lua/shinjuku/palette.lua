@@ -22,6 +22,7 @@ local palette = {
   sea_green = "#87d7af",
   misty_rose = "#d7afaf",
   light_cyan = "#afd7d7",
+  light_blue = "#afd7ff",
 
   neon_yellow = "#ffff5f",
   deep_lavender = "#5f5f87",

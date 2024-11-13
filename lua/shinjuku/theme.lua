@@ -40,7 +40,7 @@ theme.loadSyntax = function()
 		Special = { fg = colors.darkest_text }, -- any special symbol
 		SpecialChar = { fg = colors.constant }, -- special character in a constant
 		Tag = { fg = colors.darkest_text }, -- you can use CTRL-] on this
-		Delimiter = { fg = colors.syntax_function }, -- character that needs attention like , or .
+		Delimiter = { fg = colors.syntax_param }, -- character that needs attention like , or .
 		SpecialComment = { fg = colors.syntax_keyword }, -- special things inside a comment
 		Debug = { fg = colors.delete }, -- debugging statements
 		Underlined = { fg = colors.highlight, bg = colors.none, style = "underline" }, -- text that stands out, HTML links
@@ -80,7 +80,7 @@ theme.loadEditor = function()
 		Conceal = { fg = colors.dark_background }, -- placeholder characters substituted for concealed text (see 'conceallevel')
 		Cursor = { fg = colors.darkest_text, bg = colors.none, style = "reverse" }, -- the character under the cursor
 		CursorIM = { fg = colors.dark_text, bg = colors.none, style = "reverse" }, -- like Cursor, but used when in IME mode
-		Directory = { fg = colors.syntax_function, bg = colors.none }, -- directory names (and other special names in listings)
+		Directory = { fg = colors.syntax_param, bg = colors.none }, -- directory names (and other special names in listings)
 		EndOfBuffer = { fg = colors.dark_background },
 		ErrorMsg = { fg = colors.none },
 		Folded = { fg = colors.comment, bg = colors.none, style = italic },
