@@ -619,10 +619,10 @@ theme.loadPlugins = function()
 		SneakScope = { bg = colors.dark_background },
 
 		-- Cmp
-		CmpItemKind = { fg = colors.warning },
-		CmpItemAbbrMatch = { fg = colors.dark_text, style = bold },
-		CmpItemAbbrMatchFuzzy = { fg = colors.dark_text, style = bold },
-		CmpItemAbbr = { fg = colors.darkest_text },
+		CmpItemKind = { fg = colors.bracket },
+		CmpItemAbbr = { fg = colors.dark_text },
+		CmpItemAbbrMatch = { fg = colors.error, style = bold },
+		CmpItemAbbrMatchFuzzy = { fg = colors.error, style = bold },
 		CmpItemMenu = { fg = colors.success },
 
 		-- Indent Blankline
