@@ -75,7 +75,7 @@ theme.loadEditor = function()
 
 	local editor = {
 		NormalFloat = { fg = colors.darkest_text, bg = colors.float }, -- normal text and background color
-		FloatBorder = { fg = colors.darkest_text, bg = colors.float }, -- normal text and background color
+		FloatBorder = { fg = colors.darkest_text, bg = colors.background }, -- normal text and background color
 		ColorColumn = { fg = colors.none, bg = colors.dark_background }, -- used for the columns set with 'colorcolumn'
 		Conceal = { fg = colors.dark_background }, -- placeholder characters substituted for concealed text (see 'conceallevel')
 		Cursor = { fg = colors.darkest_text, bg = colors.none, style = "reverse" }, -- the character under the cursor
@@ -208,12 +208,12 @@ theme.loadEditor = function()
 		editor.DiffAdd = { fg = colors.success, bg = colors.dark_background } -- diff mode: Added line
 		editor.DiffChange = { fg = colors.constant, bg = colors.dark_background } -- diff mode: Changed line
 		editor.DiffDelete = { fg = colors.delete, bg = colors.dark_background } -- diff mode: Deleted line
-		editor.DiffText = { fg = colors.warning, bg = colors.dark_background } -- diff mode: Changed text within a changed line
+		editor.DiffText = { fg = colors.substitute, bg = colors.dark_background } -- diff mode: Changed text within a changed line
 	else
 		editor.DiffAdd = { fg = colors.success, bg = colors.none, style = "reverse" } -- diff mode: Added line
 		editor.DiffChange = { fg = colors.constant, bg = colors.none, style = "reverse" } -- diff mode: Changed line
 		editor.DiffDelete = { fg = colors.delete, bg = colors.none, style = "reverse" } -- diff mode: Deleted line
-		editor.DiffText = { fg = colors.warning, bg = colors.none, style = "reverse" } -- diff mode: Changed text within a changed line
+		editor.DiffText = { fg = colors.substitute, bg = colors.none, style = "reverse" } -- diff mode: Changed text within a changed line
 	end
 
 	return editor
