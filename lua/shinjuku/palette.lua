@@ -2,14 +2,16 @@ local palette = {
   pure_black = "#000000",
   darker_than_black = "#121212",
   black = "#1c1c1c",
-  darkest_gray = '#262626',
+  darkest_gray = "#262626",
   dark_gray = "#303030",
   gray = "#444444",
   light_gray = "#585858",
   silver = "#808080",
+  light_silver = "#9e9e9e",
   darkest_white = "#bcbcbc",
   darker_white = "#c6c6c6",
   white = "#d0d0d0",
+  brighter_white = "#e4e4e4",
   bright_white = "#ffffff",
 
   blue = "#00d7ff",
@@ -26,7 +28,7 @@ local palette = {
 
   neon_yellow = "#ffff5f",
   deep_lavender = "#5f5f87",
-  deep_pink = '#f54980',
+  deep_pink = "#f54980",
 
   none = "NONE",
 }

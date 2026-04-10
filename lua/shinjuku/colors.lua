@@ -30,7 +30,7 @@ local colors = {
 if vim.g.shinjuku_minimal_syntax then
   colors.syntax_default = palette.white
   colors.syntax_function = palette.sky_blue
-  colors.syntax_keyword = palette.bright_white
+  colors.syntax_keyword = palette.light_silver
   colors.syntax_param = palette.light_cyan
   colors.syntax_tag = palette.light_blue
   colors.string = vim.g.shinjuku_contrast_strings == false and palette.bright_white or palette.misty_rose
