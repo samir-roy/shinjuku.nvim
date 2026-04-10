@@ -85,6 +85,7 @@ and minimal syntax highlighting, without changing the configuration or reloading
 | shinjuku_italic                     | `true`      | Allow italics
 | shinjuku_bold                       | `true`      | Allow bold
 | shinjuku_minimal_syntax             | `false`     | Use fewer colors in syntax highlighting
+| shinjuku_contrast_strings           | `true`      | Strings use a deeper color for emphasis
 
 ```lua
 -- Example config in lua

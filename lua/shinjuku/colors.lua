@@ -29,18 +29,18 @@ local colors = {
 -- Optional fewer colors in syntax highlighting
 if vim.g.shinjuku_minimal_syntax then
   colors.syntax_default = palette.white
-  colors.syntax_function = palette.white
+  colors.syntax_function = palette.sky_blue
   colors.syntax_keyword = palette.bright_white
-  colors.syntax_param = palette.white
-  colors.syntax_tag = palette.white
-  colors.string = palette.sky_blue
+  colors.syntax_param = palette.light_cyan
+  colors.syntax_tag = palette.light_blue
+  colors.string = vim.g.shinjuku_contrast_strings == false and palette.bright_white or palette.misty_rose
 else
   colors.syntax_default = palette.white
   colors.syntax_function = palette.sea_green
   colors.syntax_keyword = palette.light_cyan
   colors.syntax_param = palette.sky_blue
   colors.syntax_tag = palette.sea_green
-  colors.string = palette.red
+  colors.string = vim.g.shinjuku_contrast_strings == false and palette.misty_rose or palette.red
 end
 
 -- Optional contrast sidebars, floating windows and popup menus
